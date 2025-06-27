@@ -33,6 +33,7 @@ def process_numbers(input_filename, output_filename):
         f.write(f"Сумма элементов больших 10 во второй половине: {sum_greater_than_10}\n")
 
 # Пример использования
+input_filename = 'text11.txt'
 output_filename = 'output_results.txt'
 process_numbers(input_filename, output_filename)
 print(f"Результаты записаны в файл '{output_filename}'.")
