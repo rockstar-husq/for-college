@@ -20,7 +20,6 @@ def find_works_in_file(filename):
 
     return works
 
-# Пример использования
 input_filename = 'Dostoevsky.txt'
 works = find_works_in_file(input_filename)
 
