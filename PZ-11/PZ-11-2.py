@@ -20,7 +20,6 @@ def process_file(input_filename, output_filename):
 
     return letter_count
 
-# Пример использования
 input_filename = 'text18-8.txt'  # Исходный файл
 output_filename = 'modified_text.txt'  # Новый файл
 
