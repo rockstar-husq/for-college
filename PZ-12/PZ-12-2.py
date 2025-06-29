@@ -8,7 +8,6 @@ def uppercase_generator(s):
         else:
             yield char  # Если не буква, возвращаем символ как есть
 
-# Пример использования
 input_string = "Hello, World!"
 uppercase_gen = uppercase_generator(input_string)
 
