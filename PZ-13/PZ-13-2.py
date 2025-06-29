@@ -4,7 +4,6 @@ def replace_last_row_with_zero(matrix):
     if matrix:  # Проверяем, что матрица не пустая
         matrix[-1] = [0] * len(matrix[-1])  # Заменяем последнюю строку на нули
 
-# Пример использования
 rows = int(input("Введите количество строк: "))
 cols = int(input("Введите количество столбцов: "))
 matrix = []
