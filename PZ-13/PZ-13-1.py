@@ -6,7 +6,6 @@ def increase_column_by_two(matrix, column_index):
         if column_index < len(row):  # Проверяем, что индекс столбца корректен
             row[column_index] *= 2
 
-# Пример использования
 rows = int(input("Введите количество строк: "))
 cols = int(input("Введите количество столбцов: "))
 matrix = []
