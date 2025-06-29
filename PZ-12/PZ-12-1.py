@@ -9,7 +9,6 @@ def count_pairs_divisible_by_3(arr):
     count = sum(1 for x, y in pairs if (x * y) % 3 == 0)
     return count
 
-# Пример использования
 n = [1, 2, 3, 4, 5, 6]
 result = count_pairs_divisible_by_3(n)
 print("Количество пар, произведение которых делится на 3:", result)
