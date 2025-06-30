@@ -7,8 +7,7 @@ p = re.compile('«([а-яА-Я\s]+)»')
 def find_works_in_file(filename):
     with open(filename, 'r', encoding='utf-8') as file:
         content = file.read()
-
-    # Предположим, что произведения разделены строками, начинающимися с "Название:"
+        
     works = p.findall(content)
 
     # убираем повторения
