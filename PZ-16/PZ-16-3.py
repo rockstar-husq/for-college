@@ -4,6 +4,7 @@
 # бинарном формате.
 
 import pickle
+#pickle
 
 class Person:
     def __init__(self, name, age, gender):
@@ -25,7 +26,6 @@ def load_def(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
 
-# Пример использования
 if __name__ == "__main__":
     # Создаем экземпляры класса Person
     person1 = Person("Алексей", 30, "Мужской")
