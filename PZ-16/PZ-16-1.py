@@ -2,7 +2,6 @@
 # который выводит информацию о человеке в формате "Имя: имя, Возраст: возраст,
 # Пол: пол".
 
-
 class Person:
     def __init__(self, name, age, gender):
         self.name = name  # Имя
