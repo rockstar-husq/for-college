@@ -42,13 +42,22 @@ def delete_order(order_id):
     cursor.execute('DELETE FROM Orders WHERE id = ?', (order_id,))
     conn.commit()
   
+def update_order(order_id, product_code, product_name, customer_name, order_date, delivery_time, order_cost):
+    cursor.execute('''
+    UPDATE Orders
+    SET product_code = ?, product_name = ?, customer_name = ?, order_date = ?, delivery_time = ?, order_cost = ?
+    WHERE id = ?
+    ''', (product_code, product_name, customer_name, order_date, delivery_time, order_cost, order_id))
+    conn.commit()
+
 def main():
     while True:
         print("\nМеню:")
         print("1. Добавить заказ")
         print("2. Просмотреть заказы")
         print("3. Удалить заказ")
-        print("4. Выход")
+        print("4. Обновить заказ")
+        print("5. Выход")
 
         choice = input("Выберите действие: ")
 
@@ -72,6 +81,17 @@ def main():
             print("Заказ удален.")
 
         elif choice == '4':
+            order_id = int(input("Введите ID заказа для обновления: "))
+            product_code = input("Введите новый код товара: ")
+            product_name = input("Введите новое наименование товара: ")
+            customer_name = input("Введите новое наименование заказчика: ")
+            order_date = input("Введите новую дату заказа (YYYY-MM-DD): ")
+            delivery_time = int(input("Введите новый срок исполнения (от 1 до 10 дней): "))
+            order_cost = float(input("Введите новую стоимость заказа: "))
+            update_order(order_id, product_code, product_name, customer_name, order_date, delivery_time, order_cost)
+            print("Заказ обновлен.")
+
+        elif choice == '5':
             break
 
         else:
